@@ -1,5 +1,6 @@
 html {
   font-family: "Roboto" !important;
+  background-color: rgb(115, 0, 195);
 }
 
 .navbar-header {
@@ -8,9 +9,6 @@ html {
 }
 
 .jumbotron {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
     color: white !important;
     background-color: rgb(115, 0, 195) !important;
 }
