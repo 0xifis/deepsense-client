@@ -6,7 +6,7 @@ Chart.defaults.global.legend.display = false;
 Chart.defaults.global.elements.point.radius = 0;
 
 var data = {
-    labels: ["Happy", "Sad", "Relaxed", "Tense"],
+    labels: ["Happy", "Relaxed", "Sad", "Tense"],
     datasets: [{
         backgroundColor: "rgba(179,181,198,0.2)",
         borderColor: "rgba(179,181,198,1)",
@@ -24,11 +24,11 @@ var linearGraph = new Chart(cty, {
         },
         scales: {
             yAxes: [{
-                display: false,
-            }],
-            gridlines: {
-              display: false,
-            }
+                display: true,
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
         },
         maintainAspectRatio: true,
         responsive: true,
@@ -55,7 +55,7 @@ $(function() {
                 cache: false
             })
             .done(function(raw) {
-                linearGraph.data.datasets[0].data = [raw.happy, raw.sad, raw.relax, raw.tense];
+                linearGraph.data.datasets[0].data = [raw.alpha, raw.beta, raw.gamma, raw.theta];
                 linearGraph.update();
             });
     }, 1000)
@@ -68,7 +68,7 @@ $(function() {
                 cache: false
             })
             .done(function(raw) {
-                radarChart.data.datasets[0].data = [raw.happy, raw.sad, raw.relax, raw.tense];
+                radarChart.data.datasets[0].data = [raw.alpha, raw.beta, raw.gamma, raw.theta];
                 radarChart.update();
             });
     }, 1000)
