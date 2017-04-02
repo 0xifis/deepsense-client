@@ -4,5 +4,8 @@
   },
   "devDependencies": {
     "browser-sync": "^1.9.2"
+  },
+  "dependencies": {
+    "chart.js": "^2.5.0"
   }
 }
